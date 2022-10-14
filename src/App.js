@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 function App() {
   return (
     <div className="App">
-      <Button variant="text" color="secondary">
+      <Button variant="outlined" color="secondary">
         Text
       </Button>
     </div>
