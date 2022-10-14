@@ -1,8 +1,15 @@
-import { Box, Button, Typography } from "@mui/material";
-import FacebookIcon from "@mui/icons-material/Facebook";
+import { Container } from "@mui/material";
 
 function App() {
-  return <Box>Hello World</Box>;
+  return (
+    <Container
+      sx={{
+        backgroundColor: "tomato",
+      }}
+    >
+      Hello World
+    </Container>
+  );
 }
 
 export default App;
