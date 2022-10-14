@@ -4,9 +4,9 @@ function App() {
   return (
     <Stack
       direction="row"
-      sx={{
-        backgroundColor: "tomato",
-      }}
+      justifyContent="space-between"
+      alignItems="center"
+      spacing={2}
     >
       <Box
         flex={1}
