@@ -4,7 +4,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 function App() {
   return (
     <div className="App">
-      <Button startIcon={<FacebookIcon />} variant="outlined" color="secondary">
+      <Button endIcon={<FacebookIcon />} variant="outlined" color="secondary">
         Text
       </Button>
     </div>
