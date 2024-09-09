@@ -2,11 +2,18 @@ import {
   AppBar,
   Box,
   InputBase,
+  Menu,
   styled,
   Toolbar,
   Typography,
+  MenuItem,
 } from "@mui/material";
-import { Facebook, Instagram, Twitter } from "@mui/icons-material";
+import {
+  Facebook,
+  Instagram,
+  Menu as MenuIcon,
+  Twitter,
+} from "@mui/icons-material";
 
 const NavBar = () => {
   const StyledToolbar = styled(Toolbar)({
@@ -45,7 +52,15 @@ const NavBar = () => {
           <Instagram />
           <Twitter />
         </StyledBox>
-        <MenuBox>
+        <MenuIcon
+          sx={{
+            display: {
+              xs: "none",
+              sm: "none",
+              md: "flex",
+            },
+          }}
+        >
           {MenuItems.map((o) => (
             <Typography
               key={o.Name}
@@ -54,10 +69,37 @@ const NavBar = () => {
               {o.Name}
             </Typography>
           ))}
-        </MenuBox>
+        </MenuIcon>
         <SearchBox>
           <InputBase placeholder="Search ..." sx={{ color: "white" }} />
+          <Menu
+            sx={{
+              color: "white",
+              display: {
+                xs: "block",
+                sm: "block",
+                md: "none",
+              },
+            }}
+          />
         </SearchBox>
+        <Menu
+          id="demo-positioned-menu"
+          aria-labelledby="demo-positioned-button"
+          open={true}
+          anchorOrigin={{
+            vertical: "top",
+            horizontal: "left",
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "left",
+          }}
+        >
+          <Box sx={{ width: 350, height: "90vh" }}>
+            <MenuItem>Profile</MenuItem>
+          </Box>
+        </Menu>
       </StyledToolbar>
     </AppBar>
   );
