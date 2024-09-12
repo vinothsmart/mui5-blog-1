@@ -1,3 +1,4 @@
+import { memo, useState } from "react";
 import {
   AppBar,
   Box,
@@ -21,14 +22,14 @@ const NavBar = () => {
     justifyContent: "space-between",
   });
 
-  const StyledBox = styled(Box)({
+  const SocialBox = styled(Box)({
     display: "flex",
     gap: 10,
   });
 
   const MenuBox = styled(Box)({
     display: "flex",
-    gap: 10,
+    gap: 30,
   });
 
   const MenuItems = [
@@ -44,32 +45,36 @@ const NavBar = () => {
     gap: 5,
   });
 
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <AppBar sx={{ background: "black" }}>
       <StyledToolbar>
-        <StyledBox>
+        <SocialBox>
           <Facebook />
           <Instagram />
           <Twitter />
-        </StyledBox>
-        <MenuIcon
-          sx={{
-            display: {
-              xs: "none",
-              sm: "none",
-              md: "flex",
-            },
-          }}
-        >
-          {MenuItems.map((o) => (
-            <Typography
-              key={o.Name}
-              sx={{ cursor: "pointer", fontSize: "14px" }}
-            >
-              {o.Name}
-            </Typography>
-          ))}
-        </MenuIcon>
+        </SocialBox>
+        <MenuBox>
+          <MenuIcon
+            sx={{
+              display: {
+                xs: "none",
+                sm: "none",
+                md: "flex",
+              },
+            }}
+          >
+            {MenuItems.map((o) => (
+              <Typography
+                key={o.Name}
+                sx={{ cursor: "pointer", fontSize: "14px" }}
+              >
+                {o.Name}
+              </Typography>
+            ))}
+          </MenuIcon>
+        </MenuBox>
         <SearchBox>
           <InputBase placeholder="Search ..." sx={{ color: "white" }} />
           <Menu
@@ -86,7 +91,7 @@ const NavBar = () => {
         <Menu
           id="demo-positioned-menu"
           aria-labelledby="demo-positioned-button"
-          open={true}
+          open={isOpen}
           anchorOrigin={{
             vertical: "top",
             horizontal: "left",
@@ -97,7 +102,14 @@ const NavBar = () => {
           }}
         >
           <Box sx={{ width: 350, height: "90vh" }}>
-            <MenuItem>Profile</MenuItem>
+            {MenuItems.map((o) => (
+              <MenuItem
+                key={o.Name}
+                sx={{ cursor: "pointer", fontSize: "14px" }}
+              >
+                {o.Name}
+              </MenuItem>
+            ))}
           </Box>
         </Menu>
       </StyledToolbar>
@@ -105,4 +117,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default memo(NavBar);
