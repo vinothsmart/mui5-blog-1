@@ -55,29 +55,27 @@ const NavBar = () => {
           <Instagram />
           <Twitter />
         </SocialBox>
-        <MenuBox>
-          <MenuIcon
-            sx={{
-              display: {
-                xs: "none",
-                sm: "none",
-                md: "flex",
-              },
-            }}
-          >
-            {MenuItems.map((o) => (
-              <Typography
-                key={o.Name}
-                sx={{ cursor: "pointer", fontSize: "14px" }}
-              >
-                {o.Name}
-              </Typography>
-            ))}
-          </MenuIcon>
+        <MenuBox
+          sx={{
+            display: {
+              xs: "none",
+              sm: "none",
+              md: "flex",
+            },
+          }}
+        >
+          {MenuItems.map((o) => (
+            <Typography
+              key={o.Name}
+              sx={{ cursor: "pointer", fontSize: "14px" }}
+            >
+              {o.Name}
+            </Typography>
+          ))}
         </MenuBox>
         <SearchBox>
           <InputBase placeholder="Search ..." sx={{ color: "white" }} />
-          <Menu
+          <MenuIcon
             sx={{
               color: "white",
               display: {
@@ -88,31 +86,28 @@ const NavBar = () => {
             }}
           />
         </SearchBox>
-        <Menu
-          id="demo-positioned-menu"
-          aria-labelledby="demo-positioned-button"
-          open={isOpen}
-          anchorOrigin={{
-            vertical: "top",
-            horizontal: "left",
-          }}
-          transformOrigin={{
-            vertical: "top",
-            horizontal: "left",
-          }}
-        >
-          <Box sx={{ width: 350, height: "90vh" }}>
-            {MenuItems.map((o) => (
-              <MenuItem
-                key={o.Name}
-                sx={{ cursor: "pointer", fontSize: "14px" }}
-              >
-                {o.Name}
-              </MenuItem>
-            ))}
-          </Box>
-        </Menu>
       </StyledToolbar>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        open={true}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "left",
+        }}
+      >
+        <Box sx={{ width: 350, height: "90vh" }}>
+          {MenuItems.map((o) => (
+            <MenuItem key={o.Name} sx={{ cursor: "pointer", fontSize: "14px" }}>
+              {o.Name}
+            </MenuItem>
+          ))}
+        </Box>
+      </Menu>
     </AppBar>
   );
 };
