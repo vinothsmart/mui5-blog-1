@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { memo, useCallback, useState } from "react";
 import {
   AppBar,
   Box,
@@ -47,6 +47,14 @@ const NavBar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleOpen = useCallback(() => {
+    setIsOpen(true);
+  }, []);
+
+  const handleClose = useCallback(() => {
+    setIsOpen(false);
+  }, []);
+
   return (
     <AppBar sx={{ background: "black" }}>
       <StyledToolbar>
@@ -84,13 +92,15 @@ const NavBar = () => {
                 md: "none",
               },
             }}
+            onClick={handleOpen}
           />
         </SearchBox>
       </StyledToolbar>
       <Menu
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
-        open={true}
+        open={isOpen}
+        onClose={handleClose}
         anchorOrigin={{
           vertical: "top",
           horizontal: "right",
