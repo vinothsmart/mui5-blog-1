@@ -56,7 +56,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <AppBar sx={{ background: "black" }}>
+    <AppBar sx={{ background: "black" }} position="static">
       <StyledToolbar>
         <SocialBox>
           <Facebook />
