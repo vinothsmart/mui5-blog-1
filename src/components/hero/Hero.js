@@ -26,7 +26,7 @@ const Hero = () => {
       >
         <Box
           sx={{
-            width: { xs: "100%", sm: "100%", md: "40%" },
+            width: { xs: "100%", sm: "50%", md: "40%" },
             padding: { xs: 3, sm: 2, md: 20 },
           }}
         >
