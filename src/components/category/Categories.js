@@ -1,36 +1,69 @@
 import styled from "@emotion/styled";
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { memo } from "react";
+import kidsImage from "../../static/kids.jpg";
+import mensName from "../../static/men.jpg";
+import womensName from "../../static/women.jpg";
 
 const StyledBox = styled(Box)({
   height: 200,
   width: "100%",
   cursor: "pointer",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+  backgroundSize: "cover",
 });
 
-const StyledTypography = styled(Box)({
-  margin: "25p% 50px 25% 50px",
+const StyledTypography = styled(Typography)({
+  margin: "25% 50px 25% 50px",
   background: "white",
-  opcity: "0.8",
+  opacity: 0.8,
 });
 
 const Categories = () => {
   return (
     <Box>
-      <Stack direction={"row"} spacing={4}>
-        <StyledBox>
+      <Stack
+        direction={{
+          xs: "column",
+          sm: "row",
+          md: "row",
+          lg: "row",
+          xl: "row",
+        }}
+        spacing={{
+          xs: 2,
+          sm: 3,
+          md: 4,
+          lg: 5,
+          xl: 6,
+        }}
+      >
+        <StyledBox
+          sx={{
+            backgroundImage: `url(${kidsImage})`,
+          }}
+        >
           <StyledTypography align="center" variant="h3">
-            Category 1
+            Kids
           </StyledTypography>
         </StyledBox>
-        <StyledBox>
+        <StyledBox
+          sx={{
+            backgroundImage: `url(${mensName})`,
+          }}
+        >
           <StyledTypography align="center" variant="h3">
-            Category 2
+            Men
           </StyledTypography>
         </StyledBox>
-        <StyledBox>
+        <StyledBox
+          sx={{
+            backgroundImage: `url(${womensName})`,
+          }}
+        >
           <StyledTypography align="center" variant="h3">
-            Category 3
+            Women
           </StyledTypography>
         </StyledBox>
       </Stack>
