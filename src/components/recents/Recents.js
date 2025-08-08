@@ -23,11 +23,24 @@ const Recents = () => {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              Perfermes
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              Wearing this shirt is like wearing a piece of art. The intricate
+              patterns and vibrant colors make a bold statement.
+            </Typography>
+            <Typography
+              gutterBottom
+              variant="body2"
+              align="center"
+              component="div"
+            >
+              it's women love it
+            </Typography>
+            <Typography variant="h5" align="center" color="text.secondary">
+              The shirt is made from high-quality materials, ensuring both
+              comfort and durability. It's a perfect choice for those who want
+              to express their individuality through fashion.
             </Typography>
           </CardContent>
           <CardActions>
