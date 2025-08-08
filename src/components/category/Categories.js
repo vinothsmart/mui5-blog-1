@@ -38,6 +38,7 @@ const Categories = () => {
           lg: 5,
           xl: 6,
         }}
+        mt={5}
       >
         <StyledBox
           sx={{
