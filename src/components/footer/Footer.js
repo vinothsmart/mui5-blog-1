@@ -1,6 +1,5 @@
-import { Box, Stack, styled, Typography } from "@mui/material";
-import { Facebook, Instagram, Twitter } from "@mui/icons-material";
-
+import { Box, Stack, Typography, styled } from "@mui/material";
+import { Facebook, Instagram, Twitter } from "@mui/icons-material/";
 const SocialBox = styled(Box)({
   display: "flex",
   gap: 10,
@@ -9,60 +8,49 @@ const SocialBox = styled(Box)({
 
 const Footer = () => {
   return (
-    <Box sx={{ backgroundColor: "black", height: "300px" }}>
-      <Stack direction={{ xs: "row", sm: "row", md: "row" }} p={7}>
+    <Box sx={{ background: "black", height: "300px" }}>
+      <Stack direction={{ xs: "row", md: "row" }} p={7}>
         <Box flex={1}>
-          <Typography color="white" align="center">
-            Contact US
+          <Typography color={"white"} align={"center"}>
+            Contact Us
           </Typography>
-          <Typography color="white" align="center">
-            About US
+          <Typography color={"white"} align={"center"}>
+            of squamate reptiles, with over 6,000 species,
           </Typography>
-          <Typography color="white" align="center">
-            Link 2
+          <Typography color={"white"} align={"center"}>
+            continents except Antarcti
           </Typography>
-          <Typography color="white" align="center">
-            Link 3
+          <Typography color={"white"} align={"center"}>
+            ranging across
           </Typography>
         </Box>
         <Box flex={1}>
-          <Typography color="white" align="center">
-            Data Policy
+          <Typography color={"white"} align={"center"}>
+            Data policy
           </Typography>
-          <Typography color="white" align="center">
-            Terms of Service
+          <Typography color={"white"} align={"center"}>
+            cookies
           </Typography>
-          <Typography color="white" align="center">
-            Cookies
-          </Typography>
-        </Box>
-        <Box flex={1}>
-          <Typography color="white" align="center">
-            Data Policy
-          </Typography>
-          <Typography color="white" align="center">
-            Terms of Service
-          </Typography>
-          <Typography color="white" align="center">
-            Cookies
+          <Typography color={"white"} align={"center"}>
+            Data Safety
           </Typography>
         </Box>
         <Box flex={1}>
-          <Typography color="white" align="center">
+          <Typography color={"white"} align={"center"}>
             Categories
           </Typography>
-          <Typography color="white" variant="body2" align="center">
+          <Typography color={"white"} variant={"body2"} align={"center"}>
             Kids
           </Typography>
-          <Typography color="white" variant="body2" align="center">
-            Mens
+          <Typography color={"white"} variant={"body2"} align={"center"}>
+            Women
           </Typography>
-          <Typography color="white" variant="body2" align="center">
-            Womens
+          <Typography color={"white"} variant={"body2"} align={"center"}>
+            Men
           </Typography>
         </Box>
-        <Box flex={1}>
-          <Typography color="white" align="center">
+        <Box>
+          <Typography color={"white"} align={"center"}>
             Follow Us
           </Typography>
           <SocialBox>
@@ -75,4 +63,5 @@ const Footer = () => {
     </Box>
   );
 };
+
 export default Footer;
