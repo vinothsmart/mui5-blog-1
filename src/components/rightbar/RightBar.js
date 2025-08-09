@@ -6,12 +6,14 @@ import {
   ListItemText,
   Box,
   Typography,
+  Divider,
 } from "@mui/material";
 
 import postImage from "../../static/image1.jpg";
 import postImage1 from "../../static/image2.jpg";
 import postImage2 from "../../static/image3.jpg";
 import postImage3 from "../../static/image4.jpg";
+import Card from "../card/Card";
 
 const RightBar = () => {
   return (
@@ -71,7 +73,12 @@ const RightBar = () => {
           </ListItemAvatar>
           <ListItemText secondary=" - I Post one sampel" />
         </ListItem>
+        <Divider variant="inset" component="li" />
       </List>
+      <Typography align="center" bgcolor="black" color="white">
+        About Us
+      </Typography>
+      <Card image={postImage3}></Card>
     </Box>
   );
 };
