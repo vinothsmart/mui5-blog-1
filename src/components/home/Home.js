@@ -2,7 +2,7 @@ import { Box, Container, Stack } from "@mui/material";
 import Hero from "../hero/Hero";
 import Categories from "../category/Categories";
 import Recents from "../recents/Recents";
-import RightBar from "../rightbar/rightbar";
+import RightBar from "../rightbar/RightBar";
 
 const Home = () => {
   return (
